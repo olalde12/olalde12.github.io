@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200.. 700&family=Playfair+Display:ital,wght@0,400..900; 1.400..900&familia=Protesta+Revolución&familia=Protesta+Huelga&familia=Raleway:ital,wght@0.100..900; 1,100..900&display=swap");
+
+#contenido {
+  margin: 0%;
+  background-color: rgb(201, 5, 5);
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+#pestanas {
+  display: flex;
+  flex-direction: row;
+  margin: 0%;
+  background-color: rgb(201, 5, 5);
+  list-style: none;
+}
+
+a li {
+  padding: 30px;
+  color: rgb(252, 253, 253);
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.enlaces {
+  text-decoration: none;
+}
+
+.container {
+  box-shadow: 10px 10px 30px 20px rgb(7, 7, 7);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#mark {
+  background-image: linear-gradient(
+    to top,
+    #079b3a,
+    #3eb15e,
+    #61c780,
+    #82dea2,
+    #a4f4c3
+  );
+}
+
+#mark img {
+  padding: 15px;
+  padding-top: 25px;
+  width: 14.5cm;
+  height: 54%;
+}
+
+#dw {
+  background-image: linear-gradient(
+    to left top,
+    #e3e313,
+    #ecb900,
+    #ef8c00,
+    #e95c00,
+    #dc1717
+  );
+}
+
+#dw img {
+  padding: 15px;
+  padding-top: 20px;
+  width: 14.5cm;
+  height: 40%;
+}
+
+#tienda {
+  background-image: linear-gradient(
+    to left top,
+    #f05470,
+    #f66e85,
+    #fa8699,
+    #fd9dad,
+    #ffb3c0
+  );
+}
+
+#tienda img {
+  padding: 15px;
+  padding-top: 30px;
+  width: 9.4cm;
+  height: 9cm;
+}
+
+#premio {
+  background-image: linear-gradient(
+    to top,
+    #f09854,
+    #f4a65b,
+    #f7b463,
+    #fac16d,
+    #fdcf78
+  );
+}
+
+#premio img {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  width: 9.4cm;
+  height: 9.4cm;
+}
+
+#fantasticos {
+  background-image: linear-gradient(
+    to bottom,
+    #6abcfb,
+    #83c4fb,
+    #99ccfb,
+    #add5fb,
+    #c0ddfb
+  );
+}
+
+#fantasticos img {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  width: 9cm;
+  height: 10cm;
+}
+
+.texto {
+  padding: 12px;
+  text-align: justify;
+}
+
+#pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #pestanas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  #mark {
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      #079b3a,
+      #3eb15e,
+      #61c780,
+      #82dea2,
+      #a4f4c3
+    );
+  }
+
+  #mark img {
+    padding: 15px;
+    padding-top: 25px;
+    width: 9.7cm;
+    height: 40%;
+  }
+
+  #dw {
+    height: 100%;
+    background-image: linear-gradient(
+      to left top,
+      #e3e313,
+      #ecb900,
+      #ef8c00,
+      #e95c00,
+      #dc1717
+    );
+  }
+
+  #dw img {
+    padding: 15px;
+    padding-top: 20px;
+    width: 9.7cm;
+    height: 30%;
+  }
+}

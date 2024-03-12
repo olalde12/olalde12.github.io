@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./javascript/index.js"></script>
+    <script src="https://kit.fontawesome.com/b05e4d181f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="./Imagenes/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MARVEL STUDIOS</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul id="pestanas">
+                    <a href="./index.html"><img src="./Imagenes/logo.png"
+                            alt="Logo de Marvel" width="200" height="90"></a>
+                    <a class="enlaces" href="./index.html">
+                        <li>HOME</li>
+                    </a>
+                    <a class="enlaces" href="./peliculas.html">
+                        <li>PELICULAS / SERIES</li>
+                    </a>
+                    <a class="enlaces" href="./personajes.html">
+                        <li>PERSONAJES</li>
+                    </a>
+                    <a class="enlaces" href="./novedades.html">
+                        <li>NOVEDADES</li>
+                    </a>
+                    <a class="enlaces" href="./teorias.html">
+                        <li>TEORIAS</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="./Imagenes/imagen1.jpg" class="d-block w-100" alt="Avengers">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./Imagenes/imagen2.jpg" class="d-block w-100" alt="Heroes">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imagenes/imagen3.jpg" class="d-block w-100" alt="Poderes">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <p id="texto">El Universo cinematográfico de Marvel es una franquicia de medios y un universo compartido,
+            centrada en una serie de
+            películas de superhéroes producidas por Marvel Studios. Las películas están basadas en personajes que
+            aparecen en los cómics
+            estadounidenses publicados por Marvel Comics. La franquicia también incluye series de televisión,
+            cortometrajes, series digitales
+            y literatura. El universo compartido, al igual que el Universo Marvel original en los cómics, se estableció
+            mediante cruce de
+            elementos, escenarios, elenco y personajes comunes de la trama.
+            Marvel Studios estrena sus películas en grupos llamados "Fases".
+            <br><br>Para poder entender bien esto, al igual que sucede en los cómics, Marvel establece una clasificación
+            por fases en el UCM.
+            Por encima de esta clasificación por fases se encuentran las sagas del Universo Cinematográfico de Marvel.
+            Así que, de forma
+            esquematizada, la organización del UCM quedaría de la siguiente forma:
+            <br><br>Saga del Infinito: fase 1, fase 2 y fase 3.
+            <br>Saga del Multiverso: fase 4, fase 5 y fase 6.
+            <br><br>La primera fase de este universo es la encargada de presentar a los personajes centrales de todo lo
+            que veremos en el UCM y las organizaciones que también aparecen durante la trama: Tony Stark, Thor, Bruce
+            Banner, Nicholas Fury,
+            Steven Rogers, Natasha Romanoff, Clinton Barton, S.H.I.E.L.D. y HYDRA.
+            <br><br>Mientras que en la segunda fase la historia se centra en el desarrollo de los personajes principales
+            y en su trabajo con
+            la compañía de Furia después de la batalla de Nueva York. Aquí también conoceremos a nuevos personajes como
+            Ant-Man, todos los
+            integrantes de Guardianes de la Galaxia, Wanda y Pietro Maximoff. Y, justo antes de finalizar, se descubre
+            que la organización
+            nazi de HYDRA está trabajando dentro de SHIELD, algo que los vengadores deberán poner fin. En las tarjetas
+            siguientes se ordenan
+            las películas y series que ya han sido estrenadas en orden cronologíco y orden de estreno:
+        </p>
+
+        <div id="orden" class="container-fluid">
+            <div class="card" style="width: 24rem;">
+                <div class="card-header">
+                    <div style="padding-bottom: 10px;">
+                        <h3>Orden cronologíco de películas y series</h3>
+                        <p class="textoOrden">Esta es la cronología en el que suceden todos los acontecimientos 
+                            de las películas y series de Marvel, para conocer el argumento de la saga y entender 
+                            el momento y el lugar en el que transcurren los sucesos que tienen lugar
+                            a lo largo de su historia.</p>
+                        <button onclick="mostrar_ocultar('cronologia')" class="btn btn-dark">Mostrar lista</button>
+                    </div>
+                </div>
+                
+                <div id="cronologia" style="display: none;">
+                    <ol>
+                        <li>Capitán América: El primer vengador</li>
+                        <li>Capitana Marvel</li>
+                        <li>Iron Man</li>
+                        <li>El increíble Hulk</li>
+                        <li>Iron Man 2</li>
+                        <li>Thor</li>
+                        <li>Los vengadores</li>
+                        <li>Iron Man 3</li>
+                        <li>Thor: El mundo oscuro</li>
+                        <li>Capitán América: El soldado del invierno</li>
+                        <li>Guardianes de la Galaxia</li>
+                        <li>Guardianes de la Galaxia Vol.2</li>
+                        <li>Yo Soy Groot (Serie)</li>
+                        <li>Vengadores: La era de Ultrón</li>
+                        <li>Ant-Man</li>
+                        <li>Capitán América: Civil War</li>
+                        <li>Viuda Negra</li>
+                        <li>Black Panther</li>
+                        <li>Doctor Strange</li>
+                        <li>Spider-Man: Homecoming</li>
+                        <li>Ant-Man y la Avispa</li>
+                        <li>Thor: Ragnarok</li>
+                        <li>Vengadores: Infinity War</li>
+                        <li>Vengadores: Endgame</li>
+                        <li>Bruja Escarlata y Visión (Serie)</li>
+                        <li>Falcon y El Soldado de invierno (Serie)</li>
+                        <li>Spider-Man: Far From Home</li>
+                        <li>Loki (Serie)</li>
+                        <li>Spider-Man: No Way Home</li>
+                        <li>Eternals</li>
+                        <li>Shang-Chi y la Leyenda de los Diez Anillos</li>
+                        <li>Ojo de Halcón (Serie)</li>
+                        <li>Doctor Strange: En el multiverso de la locura</li>
+                        <li>Caballero Luna (Serie)</li>
+                        <li>Ms. Marvel (Serie)</li>
+                        <li>Thor: Love and Thunder</li>
+                        <li>She-Hulk (Serie)</li>
+                        <li>Black Panther: Wakanda Forever</li>
+                        <li>Ant-Man y la Avispa: Quantumania</li>
+                        <li>Guardianes de la Galaxia Vol.3</li>
+                        <li>Invasión Secreta (Serie)</li>
+                        <li>Loki 2 (Serie)</li>
+                        <li>The Marvels</li>
+                        <li>Echo (Serie)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="card" style="width: 24rem;">
+                <div class="card-header">
+                    <div style="padding-bottom: 10px;">
+                        <h3>Orden de estreno de películas y series</h3>
+                        <p class="textoOrden">Este orden nos ayudará a tener la experiencia más parecida al
+                            estreno.Invitándonos a revivir la experiencia que han vivido millones de personas 
+                            en los cines, disfrutando de cada pieza de un puzzle cada vez mayor
+                            y más complejo.</p>
+                        <button onclick="mostrar_ocultar('cronologia2')" class="btn btn-dark">Mostrar lista</button>
+                   </div>
+                </div>
+                <div id="cronologia2" style="display: none;">
+                    <p class="fases">Fase 1:</p>
+                    <ol>
+                        <li>Iron Man (2008)</li>
+                        <li>El increíble Hulk (2008)</li>
+                        <li>Iron Man 2 (2010)</li>
+                        <li>Thor (2011)</li>
+                        <li>Capitán América: El primer vengador (2011)</li>
+                        <li>Los Vengadores (2012)</li>
+                    </ol>
+                    <p class="fases">Fase 2:</p>
+                    <ol>
+                        <li>Iron Man 3 (2013)</li>
+                        <li>Thor: El mundo oscuro (2013)</li>
+                        <li>capitan america el soldado del invierno (2014)</li>
+                        <li>Guardianes de la Galaxia (2014)</li>
+                        <li>Vengadores la era de Ultrón (2015)</li>
+                        <li>Ant-Man (2015)</li>
+                    </ol>
+                    <p class="fases">Fase 3:</p>
+                    <ol>
+                        <li>capitan america Civil War (2016)</li>
+                        <li>Doctor Strange (2016)</li>
+                        <li>Guardianes de la Galaxia vol.2 (2017)</li>
+                        <li>Thor Ragnarok (2017)</li>
+                        <li>Spider-Man Homecoming (2017)</li>
+                        <li>Black Panther (2018)</li>
+                        <li>Vengadores infinity war (2018)</li>
+                        <li>Ant-Man y la Avispa (2018)</li>
+                        <li>Capitana Marvel (2019)</li>
+                        <li>Vengadores Endgame (2019)</li>
+                        <li>Spider-Man Far From Home (2019)</li>
+                    </ol>
+                    <p class="fases">Fase 4:</p>
+                    <ol>
+                        <li>Bruja Escarlata y vision (2021)</li>
+                        <li>Falcon y el Soldado del invierno (2021)</li>
+                        <li>loki (2021)</li>
+                        <li>Viuda Negra (2021)</li>
+                        <li>Shang-Chi y la Leyenda de los diez Anillos (2021)</li>
+                        <li>Eternals (2021)</li>
+                        <li>Ojo de Halcón (2021)</li>
+                        <li>Spider-Man no way home (2021)</li>
+                        <li>Caballero Luna (2022)</li>
+                        <li>Doctor Strange en el multiverso de la locura (2022)</li>
+                        <li>Ms Marvel (2022)</li>
+                        <li>Thor love and thunder (2022)</li>
+                        <li>Yo soy Groot (2022)</li>
+                        <li>She-Hulk (2022)</li>
+                        <li>Black Panther: Wakanda Forever (2022)</li>
+                    </ol>
+                    <p class="fases">Fase 5:</p>
+                    <ol>
+                        <li>Ant-Man y la Avispa Quantumania (2023)</li>
+                        <li>Invasión Secreta (2023)</li>
+                        <li>Guardianes de la Galaxia vol.3 (2023)</li>
+                        <li>Loki 2 (2023)</li>
+                        <li>the Marvels (2023)</li>
+                        <li>Echo (2024)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="pie" class="container-fluid">
+        <br><br>
+        <h6 style="color: white; padding: 7px;">IMÁGENES © MARVEL | REDES SOCIALES:</h6>
+        <div>
+            <a href="https://www.youtube.com/user/Marvel"><i class="fa-brands fa-youtube fa-2xl"
+                    style="color: #faf9fd;"></i></a>
+            <a href="https://www.facebook.com/Marvel/"><i class="fa-brands fa-facebook fa-2xl"
+                    style="color: #faf9fd;"></i></a>
+            <a href="https://www.instagram.com/marvel/"><i class="fa-brands fa-instagram fa-2xl"
+                    style="color: #f9f7fd;"></i></a>
+            <a href="https://www.tiktok.com/@marvel"><i class="fa-brands fa-tiktok fa-2xl"
+                    style="color: #fcfbff;"></i></a><br><br><br>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
