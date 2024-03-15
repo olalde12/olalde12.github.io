@@ -2,23 +2,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Revolution&family=Protest+Strike&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-#pestanas {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0%;
+nav {
   background-color: rgb(201, 5, 5);
+  height: 100px;
+  width: 100%;
+}
+
+.enlace {
+  position: absolute;
+  padding-left: 20px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
   list-style: none;
 }
 
-a li {
-  padding: 30px;
-  color: rgb(252, 253, 253);
-  font-size: large;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+nav ul li a {
+  color: azure;
+  font-size: 18px;
+  padding: 7px 13px;
+  text-decoration: none;
 }
 
-.enlaces {
-  text-decoration: none;
+.checkBtn {
+  font-size: 30px;
+  color: azure;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
 }
 
 #contenido {
@@ -107,15 +132,43 @@ h3 {
   color: white;
 }
 
-@media (max-width: 768px) {
-  #pestanas {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 720px) {
+  .checkBtn {
+    display: block;
   }
 
-  a li {
-    padding: 15px;
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    top: 80px;
+    left: 100%;
     text-align: center;
+    transition: all .5s;
+  }
+
+  nav {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+  }
+
+  nav a img {
+    height: 70px;
+    width: 190px;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
   }
 
   #texto {
