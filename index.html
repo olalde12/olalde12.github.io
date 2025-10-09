@@ -6,33 +6,52 @@
   <title>Punto de equilibrio</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="./style.css" rel="stylesheet">
+  <link rel="icon" href="balance.svg" type="image/x-icon">
 </head>
 <body>
   <header>
     Punto de Equilibrio
   </header>
   <main>
+    <iframe src="https://www.youtube.com/embed/MBMIN21lrYI?si=IokCHgCJ7hsDr1IR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <section>
-      <iframe src="https://www.youtube.com/embed/MBMIN21lrYI?si=IokCHgCJ7hsDr1IR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <section>
-      <h2>¿Qué es el punto de equilibrio?</h2>
-      <p>El punto de equilibrio es el nivel de ventas en el que los ingresos de una empresa 
+      <h2>Punto de equilibrio</h2>
+      <p>Es el nivel de ventas en el que los ingresos de una empresa 
         son iguales a sus costos. En este punto, la empresa no gana ni pierde dinero. 
         Si las ventas superan el punto de equilibrio, la empresa es rentable.</p>
     </section>
 
-    <section>
-      <h2>¿Qué son los costos fijos?</h2>
-      <p>Son los costos que permanecen constantes sin importar el nivel de producción</p>
-    </section>
+    <div id="cuadro">
+      <h2>Recuerda que...</h2>
+      <div id="definiciones">
+        <p><strong>Costos fijos</strong><br>
+          Son los costos que permanecen constantes sin importar el nivel de producción</p>
+        <p><strong>Costos variables</strong><br>
+          Son los costos que cambian directamente con el nivel de producción</p>
+        <p><strong>Precio de venta unitario</strong><br>
+          Es el valor al que se vende cada producto o servicio</p>
+        <button id="button_ejemplos" onclick="toggleEjemplos()">Ver ejemplos</button>
+        <div id="ejemplos" style="display: none; margin-top: 10px;">
+          <p><strong>Ejemplos de costos fijos:</strong><br>
+            Renta del local, sueldos administrativos, seguros, licencias o permisos, internet, etcétera.</p>
+          <p><strong>Ejemplos de costos variables:</strong><br>
+            Materia prima, comisiones por venta, empaques, sueldos por hora.</p>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2>¿Qué son los costos variables?</h2>
-      <p>Son los costos que cambian directamente con el nivel de producción</p>
-    </section>
-
-    <button><a href="./calcular.html">Ir a calcular</a></button>
+    <a id="ir" href="./calcular.html">Ir a calcular</a>
   </main>
+
+  <footer>
+    <p>Video incrustado cortesía de <a href="https://youtu.be/MBMIN21lrYI?si=m58JX-IP3MKRltTj" target="_blank">Kotaro en Español</a> en YouTube.</p>
+  </footer>
+
+  <script>
+    function toggleEjemplos() {
+      const ejemplos = document.getElementById("ejemplos");
+      ejemplos.style.display = ejemplos.style.display === "none" ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
