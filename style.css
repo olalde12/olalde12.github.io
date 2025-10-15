@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: #0081cc;
   margin: 0;
   padding: 0;
   color: #333;
+}
+
+#calcular_body {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(176, 224, 230);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+#titulo {
+  color: rgb(95, 158, 160);
 }
 
 header {
@@ -26,7 +40,7 @@ iframe {
 }
     
 section {
-  background: #bd7f21;
+  background: rgb(176, 224, 230);
   padding: 2px 20px 20px 20px;
   margin: 20px 0 20px 0;
   border-radius: 12px;
@@ -35,10 +49,11 @@ section {
 
 section h2 {
   text-align: center;
+  color: rgb(0, 0, 128);
 }
 
 #cuadro {
-  background: #bd7f21;
+  background: rgb(176, 224, 230);
   border-radius: 12px 12px 12px 12px;
   position: relative;
 }
@@ -51,13 +66,13 @@ section h2 {
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-top-color: #bd7f21;
+  border-top-color: rgb(176, 224, 230);
   border-bottom: 0;
   border-left: 0;
 }
 
 #cuadro h2 {
-  color: #b4b4b4;
+  color: rgb(30, 144, 255);
   text-align: center;
   font-size: 18px;
   padding-top: 10px;
@@ -65,11 +80,13 @@ section h2 {
 }
 
 #button_ejemplos {
-  background-color: rgb(176 224 230);
-  margin-left: 30%;
+  background-color: rgb(78, 146, 155);
   border-radius: 8px;
   width: 130px;
   border-style: none;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin: 0 auto;
 }
 
 #definiciones {
@@ -80,11 +97,18 @@ section h2 {
 #ir {
   display: flex;
   justify-content: center;
-  text-decoration: none;
   margin-top: 40px;
+  width: 100%;
   padding: 10px;
   border-radius: 12px;
-  background: #c7a7a7;
+  background: rgb(245, 255, 250);
+  border-color: rgb(0 0 139);
+  border-width: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#enlace {
+  text-decoration: none;
   color: rgb(0, 0, 0);
 }
 
@@ -102,7 +126,7 @@ input {
   border-radius: 6px;
 }
     
-#calcular {
+.calcular {
   background: #38b6ff;
   color: white;
   border: none;
@@ -111,6 +135,8 @@ input {
   cursor: pointer;
   border-radius: 6px;
   font-size: 1em;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
     
 #resultado {
@@ -124,8 +150,20 @@ canvas {
 }
 
 footer {
+  display: flex;
   background-color: rgb(0 0 139);
   bottom: 0;
   color: white;
   padding: 25px;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: rgb(228, 12, 12);
 }
