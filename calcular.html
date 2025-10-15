@@ -8,25 +8,26 @@
   <link href="./style.css" rel="stylesheet">
   <link rel="icon" href="balance.svg" type="image/x-icon">
 </head>
-<body>
+<body id="calcular_body">
   <header>
     Punto de Equilibrio
   </header>
   <main>
-    <h2>Calcula el punto de equilibrio</h2>
+    <h2 id="titulo">Calcula el punto de equilibrio</h2>
     <label for="costosFijos">Costos Fijos ($):</label>
-    <input type="number" id="costosFijos" placeholder="Ejemplo: 5000">
+    <input type="number" id="costosFijos" placeholder="Ejemplo: 5000" inputmode="decimal" pattern="^[0-9]+(\.[0-9]+)?$">
 
     <label for="costoVariable">Costo Variable por Unidad ($):</label>
-    <input type="number" id="costoVariable" placeholder="Ejemplo: 20">
+    <input type="number" id="costoVariable" placeholder="Ejemplo: 20" inputmode="decimal" pattern="^[0-9]+(\.[0-9]+)?$">
 
     <label for="precioVenta">Precio de Venta por Unidad ($):</label>
-    <input type="number" id="precioVenta" placeholder="Ejemplo: 50">
+    <input type="number" id="precioVenta" placeholder="Ejemplo: 50" inputmode="decimal" pattern="^[0-9]+(\.[0-9]+)?$">
 
     <label for="ventas">Unidades Vendidas:</label>
-    <input type="number" id="ventas" placeholder="Ejemplo: 300">
+    <input type="number" id="ventas" placeholder="Ejemplo: 300" inputmode="decimal" pattern="^[0-9]+(\.[0-9]+)?$">
 
-    <button id="calcular" onclick="calcular()">Calcular</button>
+    <button class="calcular" onclick="calcular()">Calcular</button>
+    <a href="index.html" class="calcular">Regresar</a>
 
     <div id="resultado"></div>
     <canvas id="grafica"></canvas>
@@ -47,7 +48,7 @@
       }
 
       const contribucion = precioVenta - costoVariable;
-      const puntoEquilibrio = costosFijos / contribucion;
+      const puntoEquilibrio = Math.ceil(costosFijos / contribucion);
       const ingresos = ventas * precioVenta;
       const costosTotales = costosFijos + (ventas * costoVariable);
       const utilidad = ingresos - costosTotales;
@@ -60,11 +61,11 @@
       `;
 
       if (utilidad > 0) {
-        resultadoTexto += '<span style="color:green">La empresa es rentable</span>';
+        resultadoTexto += '<span style="color:rgb(50, 205, 50)">La empresa es rentable</span>';
       } else if (utilidad < 0) {
-        resultadoTexto += '<span style="color:red">La empresa NO es rentable</span>';
+        resultadoTexto += '<span style="color:rgb(220, 20, 60)">La empresa NO es rentable</span>';
       } else {
-        resultadoTexto += '<span style="color:orange">La empresa está en el punto de equilibrio ⚖</span>';
+        resultadoTexto += '<span style="color:rgb(147, 112, 219)">La empresa está en el punto de equilibrio ⚖</span>';
       }
 
       document.getElementById("resultado").innerHTML = resultadoTexto;
@@ -81,14 +82,14 @@
             {
               label: 'Ingresos',
               data: Array.from({length: ventas+20}, (_, i) => i * precioVenta),
-              borderColor: 'green',
+              borderColor: 'rgb(50, 205, 50)',
               borderWidth: 2,
               fill: false
             },
             {
               label: 'Costos Totales',
               data: Array.from({length: ventas+20}, (_, i) => costosFijos + (i * costoVariable)),
-              borderColor: 'red',
+              borderColor: 'rgb(220, 20, 60)',
               borderWidth: 2,
               fill: false
             }
@@ -100,8 +101,32 @@
             legend: { position: 'top' }
           },
           scales: {
-            x: { title: { display: true, text: "Unidades" } },
-            y: { title: { display: true, text: "Dinero ($)" } }
+            x: {
+              title: {
+              display: true,
+              text: "Unidades",
+              color: "black" 
+              },
+              ticks: {
+                color: "black" 
+              },
+              grid: {
+                color: "black" 
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Dinero ($)",
+                color: "black"
+              },
+              ticks: {
+                color: "black" 
+              },
+              grid: {
+                color: "black"
+              }
+            }
           }
         }
       });
