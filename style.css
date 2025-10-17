@@ -89,6 +89,10 @@ section h2 {
   margin: 0 auto;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 #definiciones {
   margin-top: 0;
   padding: 0 10px 10px 10px;
@@ -161,7 +165,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #ffffff;
+  color: #747272;
 }
 
 footer a:hover {
